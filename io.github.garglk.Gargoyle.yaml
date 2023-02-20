@@ -20,11 +20,7 @@ modules:
       - install -D ../gargoyle-house.svg /app/share/icons/hicolor/scalable/apps/io.github.garglk.Gargoyle.svg
     sources:
       - type: archive
-        url: https://github.com/garglk/garglk/archive/refs/tags/2022.1.tar.gz
-        sha256: 81f7c687e60b3123e8b20db961e64f5d57c63b509947227316aeaf041d5b00ae
-      - type: patch
-        path: fdo.patch
-      - type: patch
-        path: flush-streams.patch
+        url: https://github.com/garglk/garglk/archive/refs/tags/2023.1.tar.gz
+        sha256: f766186558f8db24243cede878f38b8a2026bf2ebed5d9d4f0e690916d56827a
       - type: file
         path: gargoyle-house.svg
