@@ -1,6 +1,6 @@
 id: io.github.garglk.Gargoyle
 runtime: org.kde.Platform
-runtime_version: "5.15-21.08"
+runtime_version: "5.15-22.08"
 sdk: org.kde.Sdk
 command: gargoyle
 finish-args:
