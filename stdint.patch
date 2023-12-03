@@ -1,0 +1,11 @@
+diff -ru garglk-2023.1/garglk/garglk.h garglk-2023.1.new/garglk/garglk.h
+--- garglk-2023.1/garglk/garglk.h	2023-02-19 22:08:58.000000000 -0800
++++ garglk-2023.1.new/garglk/garglk.h	2023-12-03 12:00:37.943198596 -0800
+@@ -30,6 +30,7 @@
+ #include <array>
+ #include <cmath>
+ #include <cstddef>
++#include <cstdint>
+ #include <cstdio>
+ #include <cstring>
+ #include <deque>

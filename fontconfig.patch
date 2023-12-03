@@ -1,0 +1,46 @@
+diff -ru garglk-2023.1/garglk/fontfc.cpp garglk-2023.1.new/garglk/fontfc.cpp
+--- garglk-2023.1/garglk/fontfc.cpp	2023-02-19 22:08:58.000000000 -0800
++++ garglk-2023.1.new/garglk/fontfc.cpp	2023-12-03 12:03:03.657845009 -0800
+@@ -26,7 +26,7 @@
+ #include "glk.h"
+ #include "garglk.h"
+ 
+-static bool initialized = false;
++static FcConfig *cfg;
+ 
+ static std::string findfont(const std::string &fontname)
+ {
+@@ -42,7 +42,7 @@
+         return "";
+     }
+ 
+-    auto fs = garglk::unique(FcFontList(nullptr, p.get(), os.get()), FcFontSetDestroy);
++    auto fs = garglk::unique(FcFontList(cfg, p.get(), os.get()), FcFontSetDestroy);
+     if (fs->nfont == 0) {
+         return "";
+     }
+@@ -81,7 +81,7 @@
+ 
+ void garglk::fontreplace(const std::string &font, FontType type)
+ {
+-    if (!initialized || font.empty()) {
++    if (cfg == nullptr || font.empty()) {
+         return;
+     }
+ 
+@@ -172,12 +172,12 @@
+ 
+ void fontload()
+ {
+-    initialized = FcInit() != 0;
++    cfg = FcInitLoadConfigAndFonts();
+ }
+ 
+ void fontunload()
+ {
+-    if (initialized) {
+-        FcFini();
++    if (cfg != nullptr) {
++        FcConfigDestroy(cfg);
+     }
+ }

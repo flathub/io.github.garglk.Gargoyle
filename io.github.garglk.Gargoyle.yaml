@@ -1,6 +1,6 @@
 id: io.github.garglk.Gargoyle
 runtime: org.kde.Platform
-runtime_version: "5.15-22.08"
+runtime_version: "5.15-23.08"
 sdk: org.kde.Sdk
 command: gargoyle
 finish-args:
@@ -22,5 +22,9 @@ modules:
       - type: archive
         url: https://github.com/garglk/garglk/archive/refs/tags/2023.1.tar.gz
         sha256: f766186558f8db24243cede878f38b8a2026bf2ebed5d9d4f0e690916d56827a
+      - type: patch
+        path: stdint.patch
+      - type: patch
+        path: fontconfig.patch
       - type: file
         path: gargoyle-house.svg
