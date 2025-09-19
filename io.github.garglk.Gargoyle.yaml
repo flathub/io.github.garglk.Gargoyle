@@ -26,5 +26,7 @@ modules:
         path: stdint.patch
       - type: patch
         path: fontconfig.patch
+      - type: patch
+        path: metainfo.patch
       - type: file
         path: gargoyle-house.svg

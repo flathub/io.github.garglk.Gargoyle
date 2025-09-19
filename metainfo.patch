@@ -1,0 +1,35 @@
+diff -ru gargoyle-2023.1/garglk/io.github.garglk.Gargoyle.appdata.xml gargoyle-2023.1.new/garglk/io.github.garglk.Gargoyle.appdata.xml
+--- gargoyle-2023.1/garglk/io.github.garglk.Gargoyle.appdata.xml	2023-02-19 22:08:58.000000000 -0800
++++ gargoyle-2023.1.new/garglk/io.github.garglk.Gargoyle.appdata.xml	2025-09-19 16:04:01.778071736 -0700
+@@ -24,18 +24,23 @@
+     <screenshots>
+         <screenshot type="default">
+             <image>https://github.com/garglk/assets/raw/screenshots/git.png</image>
++            <caption>Photopia running under the Git interpreter</caption>
+         </screenshot>
+         <screenshot>
+             <image>https://github.com/garglk/assets/raw/screenshots/glulx.png</image>
++            <caption>City of Secrets running under the Glulxe interpreter</caption>
+         </screenshot>
+         <screenshot>
+             <image>https://github.com/garglk/assets/raw/screenshots/magnetic.png</image>
++            <caption>Fish! running under the Magnetic interpreter</caption>
+         </screenshot>
+         <screenshot>
+             <image>https://github.com/garglk/assets/raw/screenshots/tads.png</image>
++            <caption>Blighted Isle running under the TADS interpreter</caption>
+         </screenshot>
+         <screenshot>
+             <image>https://github.com/garglk/assets/raw/screenshots/z-machine.png</image>
++            <caption>Zork 1 running under the Bocfel interpreter</caption>
+         </screenshot>
+     </screenshots>
+     <categories>
+@@ -56,4 +61,7 @@
+     </provides>
+     <project_license>Artistic-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-only AND GPL-3.0-only AND MIT</project_license>
+     <content_rating type="oars-1.1" />
++    <developer id="io.github.garglk.Gargoyle">
++        <name>Chris Spiegel</name>
++    </developer>
+ </component>
